@@ -37,6 +37,9 @@ const Albums = ({ navigation, navigation: { setOptions } }) => {
     return (
         <> 
             <ScrollView>
+                <View>
+                    <Text style={styles.uiText}>This is just the UI</Text>
+                </View>
                 <View style={styles.albumContainer}>
                     {albumPage.map((item, index) => 
                         <View key={index}>
@@ -73,6 +76,12 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
     },
+    uiText: {
+        ...theme.textVariants.body1,
+        alignSelf: "center",
+        marginTop: theme.spacing.sm,
+        color: "red",
+    }
 })
 
 export default Albums;
